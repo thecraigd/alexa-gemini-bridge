@@ -1,0 +1,13 @@
+ask {Query}
+tell me {Query}
+what is {Query}
+how to {Query}
+why {Query}
+when {Query}
+where {Query}
+who {Query}
+what {Query}
+which {Query}
+can you {Query}
+would you {Query}
+could you {Query} 

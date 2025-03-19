@@ -120,10 +120,10 @@ app.post('/alexa-gemini', async (req, res) => {
         
         // Call Gemini API
         // Combine the system prompt with the user's query
-        const promptText = `You are speaking with a 7-year-old child, please keep all responses child-safe and child-friendly. ${userQuery}`;
+        const promptText = ` Keep your response family-friendly. ${userQuery}`;
 
         const geminiResponse = await axios.post(
-          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
+          'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-pro-exp-02-05:generateContent',
           {
             contents: [{ parts: [{ text: promptText }] }]
             },

@@ -14,7 +14,7 @@ This project creates a bridge between Amazon Alexa and Google's Gemini AI model.
 Basically, I couldn't wait for Amazon to launch Alexa Plus, and I wanted to let my 7-year-old ask questions about dinosaurs and so on to Gemini using Alexa. So I built this (with some help from Claude).
 
 Key features:
-- Child-safe responses (optimized for 7-year-old level understanding)
+- Family-friendly responses
 - Handles various question types through a flexible Alexa interaction model
 - Cleans and formats Gemini responses for optimal speech delivery
 - Deploys easily with Docker
@@ -158,12 +158,17 @@ Then ask your question: "What is the capital of France?".
 
 ## Sample Utterances
 The skill supports natural language patterns like:
+- "please {Query}"
 - "ask {Query}"
 - "tell me {Query}"
 - "what is {Query}"
 - "how to {Query}"
 - "why {Query}"
 - And many more (see sample_utterances.txt)
+
+An important note here is that Alexa Skills require an invocation word, like the ones above. However, if I use e.g. "what is quantum computing?", the query that actually gets sent to Gemini is simply "quantum computng". Gemini is usually smart enough to work out what I want and provide acceptable output, but sometimes this leads to odd behaviour.
+
+In practice, I simply use "please..." before each request, because this feels right to me (I always thank my chatbots) and it means Gemini gets the whole query to process, without the invocation words at the beginning cut off.
 
 ## Security Considerations
 

@@ -19,6 +19,9 @@ Key features:
 - Cleans and formats Gemini responses for optimal speech delivery
 - Deploys easily with Docker
 
+## Demo Video
+[![Alexa Gemini Bridge](https://img.youtube.com/vi/71qp5tVi_pg/0.jpg)](https://youtu.be/71qp5tVi_pg)
+
 ## How It Works
 
 1. **User Interaction**: The user activates the Alexa skill and asks a question

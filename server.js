@@ -27,7 +27,7 @@ app.post('/alexa-gemini', async (req, res) => {
         response: {
           outputSpeech: {
             type: 'PlainText',
-            text: 'Welcome. What would you like to know?'
+            text: 'Welcome to Gemini. What would you like to know?'
           },
           reprompt: {
             outputSpeech: {

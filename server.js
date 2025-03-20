@@ -59,7 +59,7 @@ app.post('/alexa-gemini', async (req, res) => {
       console.log(`[${requestId}] Intent name: ${intent.name}`);
       
       // Handle built-in Amazon intents
-      if (intent.name === 'AMAZON.StopIntent' || intent.name === 'AMAZON.CancelIntent') {
+      if (intent.name === 'AMAZON.StopIntent' || intent.name === 'AMAZON.CancelIntent' || intent.name === 'AMAZON.NoIntent') {
         const response = {
           version: '1.0',
           response: {

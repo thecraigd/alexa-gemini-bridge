@@ -27,7 +27,7 @@ app.post('/alexa-gemini', async (req, res) => {
         response: {
           outputSpeech: {
             type: 'PlainText',
-            text: 'Welcome to Gemini. What would you like to know?'
+            text: 'Welcome, big dog. What would you like to know?'
           },
           reprompt: {
             outputSpeech: {
@@ -154,10 +154,10 @@ app.post('/alexa-gemini', async (req, res) => {
           
           // Call Gemini API with timeout handling
           console.log(`[${requestId}] Calling Gemini API`);
-          const promptText = `Keep your response family-friendly and concise for voice. ${userQuery}`;
+          const promptText = `Keep your response family-friendly. ${userQuery}`;
           
           const geminiResponse = await axios.post(
-            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-pro-exp-02-05:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
             {
               contents: [{ parts: [{ text: promptText }] }]
             },

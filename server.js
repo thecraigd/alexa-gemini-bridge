@@ -157,7 +157,7 @@ app.post('/alexa-gemini', async (req, res) => {
           const promptText = `${userQuery}`;
           
           const geminiResponse = await axios.post(
-            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:streamGenerateContent?key=x-goog-api-key',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:GenerateContent?key=x-goog-api-key',
             {
               contents: [{ parts: [{ text: promptText }] }]
             },

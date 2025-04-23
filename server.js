@@ -65,7 +65,7 @@ app.post('/alexa-gemini', async (req, res) => {
           response: {
             outputSpeech: {
               type: 'PlainText',
-              text: 'Goodbye!'
+              text: 'Catch ya on the flippy dippy!'
             },
             shouldEndSession: true
           }
@@ -157,7 +157,7 @@ app.post('/alexa-gemini', async (req, res) => {
           const promptText = `Keep your response family-friendly. ${userQuery}`;
           
           const geminiResponse = await axios.post(
-            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent',
+            'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent',
             {
               contents: [{ parts: [{ text: promptText }] }]
             },

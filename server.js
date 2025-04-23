@@ -154,7 +154,7 @@ app.post('/alexa-gemini', async (req, res) => {
           
           // Call Gemini API with timeout handling
           console.log(`[${requestId}] Calling Gemini API`);
-          const promptText = `Keep your response family-friendly. ${userQuery}`;
+          const promptText = `${userQuery}`;
           
           const geminiResponse = await axios.post(
             'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent',
